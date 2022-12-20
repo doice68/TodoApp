@@ -10,9 +10,9 @@
 		Height="230">
 
 		<Border
-			Opacity="0.5"
+			Opacity="0.6"
 			BorderThickness="2"
-			BorderBrush="#666"
+			BorderBrush="White"
 			Background="#000">
 			
 		</Border>

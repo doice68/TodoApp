@@ -4,7 +4,7 @@
 	<Design.PreviewWith>
 		<Border Width="500" Height="400">
 			<StackPanel Margin="40">
-				<ToggleButton Content="hii" IsChecked="True"/>
+				<ToggleButton   Content="hii" IsChecked="True"/>
 				<Button Classes="Primary" Content="click me!"/>
 			</StackPanel>
 		</Border>
