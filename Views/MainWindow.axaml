@@ -1,0 +1,70 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaApplication27.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="clr-namespace:Avalonia.Xaml.Interactivity;assembly=Avalonia.Xaml.Interactivity"
+		xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
+		mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaApplication27.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+		ExtendClientAreaToDecorationsHint="True"
+		TransparencyLevelHint="AcrylicBlur"
+		Background="Transparent"
+        Title="AvaloniaApplication27">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+	
+	<Grid>
+		<Border
+			Opacity="{Binding Opacity}"
+			Background="#000"
+			IsHitTestVisible="False"/>
+		
+		<Grid 
+			ColumnDefinitions="300, *">
+			<!--left part-->
+			<Border>
+				<Border.Background>
+					<LinearGradientBrush>
+						<LinearGradientBrush.GradientStops>
+							<GradientStop Offset="0.1" Color="#000"/>
+							<GradientStop Offset="0.7" Color="#113CFC"/>
+							<GradientStop Offset="1" Color="#1597E5"/>
+						</LinearGradientBrush.GradientStops>
+					</LinearGradientBrush>
+				</Border.Background>
+			</Border>
+			<Grid 
+				Margin="40, 40"
+				RowDefinitions="50, *">
+				
+				<Label Content="TodoList App"/>
+				<ListBox 
+					SelectedIndex="0"
+					Grid.Row="1"
+					Background="Transparent">
+					
+					<ListBoxItem 
+						GotFocus="ToPage1"
+						Content="Todos"/>
+					<ListBoxItem
+						GotFocus="ToPage2"
+						Content="settings"/>
+					<ListBoxItem Content="about"/>
+				</ListBox>	
+				<Label
+					Grid.Row="1"
+					VerticalAlignment="Bottom"
+					Content="v0.5a"/>
+			</Grid>
+			<!--right part-->
+			<ContentPresenter
+				Grid.Column="1"
+				Content="{Binding CurrentPage}"/>
+		</Grid>
+	</Grid>
+
+</Window>

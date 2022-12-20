@@ -1,0 +1,18 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:AvaloniaApplication27"
+             xmlns:sys="using:System"
+			 x:Class="AvaloniaApplication27.App">
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <FluentTheme Mode="Dark"/>
+		<StyleInclude Source="/Icons.axaml"/>
+		<!--<StyleInclude Source="/Views/TodoItemView.axaml"/>-->
+		<StyleInclude Source="/Style.axaml"/>
+    </Application.Styles>
+
+
+</Application>

@@ -1,0 +1,24 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             Background="Transparent"
+			 x:Class="AvaloniaApplication27.Views.SettingsView">
+	<Grid Margin="40">
+		<StackPanel Spacing="10">
+			<Label
+				FontWeight="Bold"
+				FontSize="30"
+				Margin="0, 0, 0, 40"
+				Content="Settings:"/>
+			
+			<Label Content="background blur"/>
+			<Slider 
+				Value="{Binding Opacity}"
+				Maximum="1" 
+				TickFrequency="0.01"
+				IsSnapToTickEnabled="True"/>
+		</StackPanel>
+	</Grid>
+</UserControl>

@@ -1,0 +1,112 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:sys="using:System"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<Design.PreviewWith>
+		<Border Width="500" Height="400">
+			<StackPanel Margin="40">
+				<ToggleButton Content="hii" IsChecked="True"/>
+				<Button Classes="Primary" Content="click me!"/>
+			</StackPanel>
+		</Border>
+	</Design.PreviewWith>
+	<!--<Style Selector="Button.Primary">
+		<Setter
+			Property="Background"
+			Value="#113CFC"/>
+	</Style>
+	<Style Selector="Button.Primary:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+		<Setter 
+			Property="Background"
+			Value="#0e32ba"/>
+	</Style>
+	<Style Selector="ToggleButton:checked /template/ ContentPresenter#PART_ContentPresenter">
+		<Setter 
+			Property="Background"
+			Value="#1597E5"/>
+	</Style>-->
+	<Style Selector="Button.Icon">
+		<Setter
+			Property="Width"
+			Value="40"/>
+		<Setter
+			Property="Height"
+			Value="40"/>
+		<Setter
+			Property="Background"
+			Value="Transparent"/>
+	</Style>
+	<Style Selector="ToggleButton.Icon">
+		<Setter
+			Property="Width"
+			Value="40"/>
+		<Setter
+			Property="Height"
+			Value="40"/>
+		<Setter
+			Property="Background"
+			Value="Transparent"/>
+	</Style>
+	<Style Selector="DrawingPresenter">
+		<Setter
+			Property="Width"
+			Value="16"/>
+		<Setter
+			Property="Height"
+			Value="16"/>
+	</Style>
+	<Style Selector="ListBoxItem">
+		<Setter 
+			Property="CornerRadius" 
+			Value="13"/>
+	</Style>
+	<Style Selector="ToolTip">
+		<Setter 
+			Property="FontSize"
+			Value="16"/>
+		<Setter 
+			Property="Background"
+			Value="Black"/>
+	</Style>
+	<Style Selector="ListBoxItem.icon">
+		<Setter Property="Template">
+			<ControlTemplate>
+				<Border Background="{TemplateBinding Background}"
+						BorderBrush="{TemplateBinding BorderBrush}"
+						BorderThickness="{TemplateBinding BorderThickness}"
+						CornerRadius="{StaticResource ControlCornerRadius}"
+						Padding="{TemplateBinding Padding}">
+					<DockPanel>
+						<DrawingPresenter
+								  Drawing="{TemplateBinding Tag}"
+								  DockPanel.Dock="Left" />
+						<ContentPresenter Content="{TemplateBinding Content}"
+										  Margin="10,0,0,0"
+										  TextBlock.Foreground="{TemplateBinding Foreground}"
+										  ContentTemplate="{TemplateBinding ContentTemplate}"
+										  HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+										  VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+					</DockPanel>
+				</Border>
+			</ControlTemplate>
+		</Setter>
+	</Style>
+	<Style Selector="ListBoxItem.icon:pointerover">
+		<Setter Property="Background" Value="{StaticResource ButtonBackgroundPointerOver}" />
+	</Style>
+	<Style Selector="ListBoxItem.icon:pressed">
+		<Setter Property="Background" Value="{StaticResource ButtonBackgroundPressed}" />
+	</Style>
+
+	<Styles.Resources>
+		<!--<Color x:Key="SystemAccentColor">#4f46e5</Color>-->
+
+		<CornerRadius x:Key="ControlCornerRadius">15</CornerRadius>
+		<CornerRadius x:Key="OverlayCornerRadius">0</CornerRadius>
+
+		<Thickness x:Key="TextControlThemePadding">10,15,6,15</Thickness>
+		<Thickness x:Key="ButtonPadding">17,15,17,15</Thickness>
+
+		<Thickness x:Key="TextControlBorderThemeThickness">2</Thickness>
+		<!--<sys:Double x:Key="ControlContentThemeFontSize">16</sys:Double>-->
+	</Styles.Resources>
+</Styles>
